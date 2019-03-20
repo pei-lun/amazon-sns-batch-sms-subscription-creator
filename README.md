@@ -1,0 +1,1 @@
+# subscription-updater-of-amazon-sns
