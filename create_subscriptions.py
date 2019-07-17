@@ -20,7 +20,9 @@ def run(sns_topic_arn, path_to_phone_number_list):
         else:
             break
     current_phone_numbers = dict(
-        (s['Endpoint'], s['SubscriptionArn']) for s in current_subscriptions
+        (s['Endpoint'], s['SubscriptionArn'])
+        for s in current_subscriptions
+        if s['Protocol'] == 'sms'
     )
 
     phone_numbers = []
