@@ -9,7 +9,7 @@
 09808**2**
 ```
 
-確定要訂閱的 Amazon SNS topic ARN `arn:aws:sns:us-west-2:<account ID>:<topic name>`，記得檢查是否有權限新增訂閱到這個 topic。
+確定要訂閱的 Amazon SNS topic ARN `arn:aws:sns:<region>:<account ID>:<topic name>`，記得檢查是否有權限新增訂閱到這個 topic。
 
 安裝套件：
 
@@ -20,5 +20,5 @@ $ pipenv install
 執行程式訂閱：
 
 ```
-$ pipenv run python create_subscriptions.py arn:aws:sns:us-west-2:<account ID>:<topic name> phones.txt
+$ pipenv run python create_subscriptions.py arn:aws:sns:<region>:<account ID>:<topic name> phones.txt
 ```
