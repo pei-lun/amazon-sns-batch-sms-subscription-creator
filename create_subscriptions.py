@@ -27,7 +27,9 @@ def run(sns_topic_arn, path_to_phone_number_list):
 
     phone_numbers = []
     with open(path_to_phone_number_list) as phone_number_list_f:
-        for dirty_phone_number in phone_number_list_f.readlines():
+        for dirty_phone_number in phone_number_list_f:
+            if dirty_phone_number.isspace():
+                continue
             phone_number = dirty_phone_number.strip()
             phone_numbers.append(
                 phone_number
